@@ -1,0 +1,131 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 4 7
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L power:VDD #PWR0140
+U 1 1 60AD7CCD
+P 2850 3000
+F 0 "#PWR0140" H 2850 2850 50  0001 C CNN
+F 1 "VDD" H 2865 3173 50  0000 C CNN
+F 2 "" H 2850 3000 50  0001 C CNN
+F 3 "" H 2850 3000 50  0001 C CNN
+	1    2850 3000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2850 3000 2850 3350
+$Comp
+L Memory_EEPROM:CAT24M01L U3
+U 1 1 60ADF42B
+P 3450 3950
+F 0 "U3" H 3450 4431 50  0000 C CNN
+F 1 "CAT24M01L" H 3450 4340 50  0000 C CNN
+F 2 "CAT24M01WI:CAT24M01WI-GT3" H 4050 3700 50  0001 C CNN
+F 3 "https://www.onsemi.com/pub/Collateral/CAT24M01-D.PDF" H 3450 3950 50  0001 C CNN
+	1    3450 3950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3450 3650 3450 3350
+$Comp
+L power:GND #PWR0141
+U 1 1 60ADF432
+P 3450 4350
+F 0 "#PWR0141" H 3450 4100 50  0001 C CNN
+F 1 "GND" H 3455 4177 50  0000 C CNN
+F 2 "" H 3450 4350 50  0001 C CNN
+F 3 "" H 3450 4350 50  0001 C CNN
+	1    3450 4350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3450 4350 3450 4250
+Wire Wire Line
+	3050 3950 2850 3950
+Wire Wire Line
+	3050 4050 2850 4050
+Wire Wire Line
+	2850 4050 2850 4350
+$Comp
+L power:GND #PWR0142
+U 1 1 60ADF43E
+P 2850 4350
+F 0 "#PWR0142" H 2850 4100 50  0001 C CNN
+F 1 "GND" H 2855 4177 50  0000 C CNN
+F 2 "" H 2850 4350 50  0001 C CNN
+F 3 "" H 2850 4350 50  0001 C CNN
+	1    2850 4350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3850 3850 3950 3850
+Wire Wire Line
+	3850 3950 4250 3950
+$Comp
+L Device:R R7
+U 1 1 60ADF446
+P 4250 3600
+F 0 "R7" H 4320 3646 50  0000 L CNN
+F 1 "10k" H 4320 3555 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 4180 3600 50  0001 C CNN
+F 3 "~" H 4250 3600 50  0001 C CNN
+	1    4250 3600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R6
+U 1 1 60ADF44C
+P 3950 3600
+F 0 "R6" H 4020 3646 50  0000 L CNN
+F 1 "10k" H 4020 3555 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 3880 3600 50  0001 C CNN
+F 3 "~" H 3950 3600 50  0001 C CNN
+	1    3950 3600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3950 3350 3950 3450
+Wire Wire Line
+	3950 3750 3950 3850
+Connection ~ 3950 3850
+Wire Wire Line
+	3950 3850 4400 3850
+Wire Wire Line
+	4250 3750 4250 3950
+Connection ~ 4250 3950
+Wire Wire Line
+	4250 3950 4400 3950
+Text HLabel 4400 3850 2    50   Input ~ 0
+I2C_SDA
+Text HLabel 4400 3950 2    50   Input ~ 0
+I2C_SCL
+Wire Wire Line
+	3850 4050 4400 4050
+Text HLabel 4400 4050 2    50   Input ~ 0
+EEPROM_WP1
+Connection ~ 3450 3350
+Connection ~ 3950 3350
+Wire Wire Line
+	3950 3350 3450 3350
+Wire Wire Line
+	3950 3350 4250 3350
+Wire Wire Line
+	2850 3950 2850 3350
+Connection ~ 2850 3350
+Wire Wire Line
+	2850 3350 3450 3350
+Wire Wire Line
+	4250 3450 4250 3350
+$EndSCHEMATC

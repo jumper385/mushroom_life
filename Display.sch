@@ -1,0 +1,111 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 6 7
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+Text Notes 600  750  0    50   ~ 0
+SSD1306
+$Comp
+L Connector:Conn_01x04_Male J2
+U 1 1 60B1E12D
+P 5850 4400
+F 0 "J2" H 5958 4681 50  0000 C CNN
+F 1 "Conn_01x04_Male" H 5958 4590 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 5850 4400 50  0001 C CNN
+F 3 "~" H 5850 4400 50  0001 C CNN
+	1    5850 4400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5850 3800 5850 3600
+Wire Wire Line
+	6050 4600 6400 4600
+Wire Wire Line
+	6400 4600 6400 4800
+$Comp
+L power:GND #PWR0153
+U 1 1 60B1E87D
+P 6400 4800
+F 0 "#PWR0153" H 6400 4550 50  0001 C CNN
+F 1 "GND" H 6405 4627 50  0000 C CNN
+F 2 "" H 6400 4800 50  0001 C CNN
+F 3 "" H 6400 4800 50  0001 C CNN
+	1    6400 4800
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VDD #PWR0154
+U 1 1 60B1EF70
+P 5850 3600
+F 0 "#PWR0154" H 5850 3450 50  0001 C CNN
+F 1 "VDD" H 5865 3773 50  0000 C CNN
+F 2 "" H 5850 3600 50  0001 C CNN
+F 3 "" H 5850 3600 50  0001 C CNN
+	1    5850 3600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6050 4400 6400 4400
+Wire Wire Line
+	6050 4500 6700 4500
+Text HLabel 7050 4400 2    50   Input ~ 0
+I2C_SDA
+Text HLabel 7050 4500 2    50   Input ~ 0
+I2C_SCL
+Wire Wire Line
+	5850 3800 6050 3800
+Wire Wire Line
+	6050 4300 6050 3800
+Connection ~ 6050 3800
+Wire Wire Line
+	6050 3800 6400 3800
+$Comp
+L Device:R R14
+U 1 1 60B208C4
+P 6400 4100
+F 0 "R14" H 6470 4146 50  0000 L CNN
+F 1 "10k" H 6470 4055 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 6330 4100 50  0001 C CNN
+F 3 "~" H 6400 4100 50  0001 C CNN
+	1    6400 4100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R15
+U 1 1 60B20C27
+P 6700 4100
+F 0 "R15" H 6770 4146 50  0000 L CNN
+F 1 "10k" H 6770 4055 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 6630 4100 50  0001 C CNN
+F 3 "~" H 6700 4100 50  0001 C CNN
+	1    6700 4100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6400 3800 6400 3950
+Wire Wire Line
+	6400 4250 6400 4400
+Connection ~ 6400 3800
+Connection ~ 6400 4400
+Wire Wire Line
+	6400 4400 7050 4400
+Wire Wire Line
+	6700 3800 6700 3950
+Wire Wire Line
+	6400 3800 6700 3800
+Wire Wire Line
+	6700 4250 6700 4500
+Connection ~ 6700 4500
+Wire Wire Line
+	6700 4500 7050 4500
+$EndSCHEMATC

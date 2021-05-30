@@ -1,0 +1,99 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 3 7
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Device:Speaker_Crystal LS1
+U 1 1 60AD0047
+P 6150 2950
+F 0 "LS1" H 6325 2946 50  0000 L CNN
+F 1 "Speaker_Crystal" H 6325 2855 50  0000 L CNN
+F 2 "Buzzer_Beeper:Buzzer_Murata_PKMCS0909E4000-R1" H 6115 2900 50  0001 C CNN
+F 3 "~" H 6115 2900 50  0001 C CNN
+	1    6150 2950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5850 3050 5950 3050
+Text HLabel 4700 3750 0    50   Input ~ 0
+SPEAKER
+$Comp
+L Device:R R4
+U 1 1 60AF04E5
+P 5400 3000
+F 0 "R4" H 5470 3046 50  0000 L CNN
+F 1 "1k" H 5470 2955 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 5330 3000 50  0001 C CNN
+F 3 "~" H 5400 3000 50  0001 C CNN
+	1    5400 3000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5950 2950 5850 2950
+Wire Wire Line
+	5850 2950 5850 2700
+Wire Wire Line
+	5850 2700 5400 2700
+Wire Wire Line
+	5400 2700 5400 2850
+Wire Wire Line
+	5400 3150 5400 3350
+Wire Wire Line
+	5400 3350 5850 3350
+Wire Wire Line
+	5850 3350 5850 3050
+$Comp
+L power:GND #PWR0113
+U 1 1 60AF37B4
+P 5400 4100
+F 0 "#PWR0113" H 5400 3850 50  0001 C CNN
+F 1 "GND" H 5405 3927 50  0000 C CNN
+F 2 "" H 5400 4100 50  0001 C CNN
+F 3 "" H 5400 4100 50  0001 C CNN
+	1    5400 4100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5400 3350 5400 3550
+Connection ~ 5400 3350
+Wire Wire Line
+	5400 3950 5400 4100
+Wire Wire Line
+	4700 3750 5100 3750
+Connection ~ 5400 2700
+Wire Wire Line
+	5400 2350 5400 2700
+$Comp
+L Transistor_FET:BSS138 Q1
+U 1 1 60B7C201
+P 5300 3750
+F 0 "Q1" H 5504 3796 50  0000 L CNN
+F 1 "BSS138" H 5504 3705 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 5500 3675 50  0001 L CIN
+F 3 "https://www.onsemi.com/pub/Collateral/BSS138-D.PDF" H 5300 3750 50  0001 L CNN
+	1    5300 3750
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VDD #PWR0114
+U 1 1 60B3FFC1
+P 5400 2350
+F 0 "#PWR0114" H 5400 2200 50  0001 C CNN
+F 1 "VDD" H 5415 2523 50  0000 C CNN
+F 2 "" H 5400 2350 50  0001 C CNN
+F 3 "" H 5400 2350 50  0001 C CNN
+	1    5400 2350
+	1    0    0    -1  
+$EndComp
+$EndSCHEMATC

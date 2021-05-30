@@ -1,0 +1,3 @@
+(fp_lib_table
+  (lib (name CAT24M01WI)(type KiCad)(uri ${KIPRJMOD}/CAT24M01WI.pretty)(options "")(descr ""))
+)

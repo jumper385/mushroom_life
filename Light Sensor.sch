@@ -1,0 +1,101 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 2 7
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Device:Varistor RV1
+U 1 1 60AB2558
+P 5400 4350
+F 0 "RV1" H 5503 4396 50  0000 L CNN
+F 1 "Varistor" H 5503 4305 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 5330 4350 50  0001 C CNN
+F 3 "~" H 5400 4350 50  0001 C CNN
+	1    5400 4350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R3
+U 1 1 60AB2BA9
+P 5400 3800
+F 0 "R3" H 5470 3846 50  0000 L CNN
+F 1 "10k" H 5470 3755 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 5330 3800 50  0001 C CNN
+F 3 "~" H 5400 3800 50  0001 C CNN
+	1    5400 3800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5400 3950 5400 4050
+$Comp
+L power:GND #PWR0110
+U 1 1 60AB3780
+P 5400 4600
+F 0 "#PWR0110" H 5400 4350 50  0001 C CNN
+F 1 "GND" H 5405 4427 50  0000 C CNN
+F 2 "" H 5400 4600 50  0001 C CNN
+F 3 "" H 5400 4600 50  0001 C CNN
+	1    5400 4600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5400 4600 5400 4500
+$Comp
+L power:VDD #PWR0111
+U 1 1 60AB3D4E
+P 5400 3450
+F 0 "#PWR0111" H 5400 3300 50  0001 C CNN
+F 1 "VDD" H 5415 3623 50  0000 C CNN
+F 2 "" H 5400 3450 50  0001 C CNN
+F 3 "" H 5400 3450 50  0001 C CNN
+	1    5400 3450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5400 3450 5400 3650
+Connection ~ 5400 4050
+Wire Wire Line
+	5400 4050 5400 4200
+$Comp
+L Device:C C3
+U 1 1 60AB5698
+P 4950 4350
+F 0 "C3" H 5065 4396 50  0000 L CNN
+F 1 "1uF" H 5065 4305 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 4988 4200 50  0001 C CNN
+F 3 "~" H 4950 4350 50  0001 C CNN
+	1    4950 4350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4950 4200 4950 4050
+Wire Wire Line
+	4950 4050 5400 4050
+$Comp
+L power:GND #PWR0112
+U 1 1 60AB5CAC
+P 4950 4600
+F 0 "#PWR0112" H 4950 4350 50  0001 C CNN
+F 1 "GND" H 4955 4427 50  0000 C CNN
+F 2 "" H 4950 4600 50  0001 C CNN
+F 3 "" H 4950 4600 50  0001 C CNN
+	1    4950 4600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4950 4600 4950 4500
+Wire Wire Line
+	5400 4050 5900 4050
+Text HLabel 5900 4050 2    50   Input ~ 0
+LIGHT_OUT
+$EndSCHEMATC
